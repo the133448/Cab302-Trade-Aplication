@@ -1,0 +1,60 @@
+entity AssetType {
+	name String
+}
+entity AssetTypeQuantity {
+	quantity Integer
+}
+
+relationship ManyToOne {
+	AssetType{assetType} to AssetTypeQuantity
+}
+
+entity ApplicationUser {}
+
+relationship OneToOne {
+  ApplicationUser{internalUser} to User
+}
+
+relationship ManyToOne {
+	ApplicationUser{organisation} to Organisation
+}
+
+entity Organisation {
+	name String
+    credits Integer
+    buyOrderCredits Integer
+}
+
+relationship OneToMany {
+	Organisation to ApplicationUser{users}
+}
+
+relationship OneToMany {
+	Organisation to AssetTypeQuantity{ownedAssets}
+}
+
+entity Trade {
+	tradeStatus TradeStatus
+    tradeType TradeType
+    assetQty Integer
+    credits Integer
+}
+
+relationship ManyToOne {
+	Trade to AssetType{assetType},
+    Trade to Organisation{organisation},
+    Trade to ApplicationUser{user},
+    
+}
+
+
+
+
+enum TradeStatus {
+    PENDING, PART_FULFILLED, PART_FULFILLED
+}
+
+enum TradeType {
+	BUY, SELL
+}
+
