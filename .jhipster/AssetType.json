@@ -1,0 +1,33 @@
+{
+  "name": "AssetType",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "assetTypeQuantity",
+      "otherEntityRelationshipName": "assetType",
+      "relationshipName": "assetType"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "trade",
+      "otherEntityRelationshipName": "assetType",
+      "relationshipName": "assetType"
+    }
+  ],
+  "entityTableName": "asset_type",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210603012403"
+}

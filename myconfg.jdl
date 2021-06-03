@@ -16,7 +16,7 @@ relationship OneToOne {
 }
 
 relationship ManyToOne {
-	ApplicationUser{organisation} to Organisation
+	ApplicationUser{organisation} to Organisation{applicationUser}
 }
 
 entity Organisation {
@@ -25,9 +25,6 @@ entity Organisation {
     buyOrderCredits Integer
 }
 
-relationship OneToMany {
-	Organisation to ApplicationUser{users}
-}
 
 relationship OneToMany {
 	Organisation to AssetTypeQuantity{ownedAssets}
@@ -44,7 +41,7 @@ relationship ManyToOne {
 	Trade to AssetType{assetType},
     Trade to Organisation{organisation},
     Trade to ApplicationUser{user},
-    
+
 }
 
 

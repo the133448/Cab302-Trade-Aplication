@@ -1,0 +1,35 @@
+{
+  "name": "ApplicationUser",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "applicationUser",
+      "relationshipName": "internalUser",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "organisation",
+      "otherEntityRelationshipName": "applicationUser",
+      "relationshipName": "organisation"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "trade",
+      "otherEntityRelationshipName": "applicationUser",
+      "relationshipName": "user"
+    }
+  ],
+  "entityTableName": "application_user",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210603012405"
+}

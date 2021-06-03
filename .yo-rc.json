@@ -41,6 +41,8 @@
     "packageFolder": "com/mycompany/myapp",
     "jwtSecretKey": "Nzc2ZTQ0MWE5YjgzMzNhNGNhNDQ3ZDA3MmM3MTlmNTJjNmRlZWQxNjY4N2Q0Y2FjMDBhMjA4MDAxMDI3YmE0ODBiMTc4NDcxOWM3NmZhZTE3ZWI5NWRiNDUyOWU3ZTU4OTU2YWY2NjdhMzZmOWMxYzMyMjg4ZTNmMWEwNjI1Y2M=",
     "clientPackageManager": "npm",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "entities": ["AssetType", "AssetTypeQuantity", "ApplicationUser", "Organisation", "Trade"],
+    "lastLiquibaseTimestamp": 1622683447000
   }
 }

@@ -1,0 +1,53 @@
+{
+  "name": "Trade",
+  "fields": [
+    {
+      "fieldName": "tradeStatus",
+      "fieldType": "TradeStatus",
+      "fieldValues": "PENDING,PART_FULFILLED"
+    },
+    {
+      "fieldName": "tradeType",
+      "fieldType": "TradeType",
+      "fieldValues": "BUY,SELL"
+    },
+    {
+      "fieldName": "assetQty",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "credits",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "assetType",
+      "otherEntityRelationshipName": "assetType",
+      "relationshipName": "assetType"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "organisation",
+      "otherEntityRelationshipName": "organisation",
+      "relationshipName": "organisation"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "applicationUser"
+    }
+  ],
+  "entityTableName": "trade",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210603012407"
+}

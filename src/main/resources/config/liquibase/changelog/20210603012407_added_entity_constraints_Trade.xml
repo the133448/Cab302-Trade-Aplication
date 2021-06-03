@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity Trade.
+    -->
+    <changeSet id="20210603012407-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="asset_type_id"
+                                 baseTableName="trade"
+                                 constraintName="fk_trade__asset_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="asset_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="organisation_id"
+                                 baseTableName="trade"
+                                 constraintName="fk_trade__organisation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="organisation"/>
+
+        <addForeignKeyConstraint baseColumnNames="application_user_id"
+                                 baseTableName="trade"
+                                 constraintName="fk_trade__application_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="application_user"/>
+    </changeSet>
+</databaseChangeLog>

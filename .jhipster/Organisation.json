@@ -1,0 +1,41 @@
+{
+  "name": "Organisation",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "credits",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "buyOrderCredits",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "assetTypeQuantity",
+      "otherEntityRelationshipName": "ownedAssets",
+      "relationshipName": "assetTypeQuantity"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "trade",
+      "otherEntityRelationshipName": "organisation",
+      "relationshipName": "organisation"
+    }
+  ],
+  "entityTableName": "organisation",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210603012406"
+}
